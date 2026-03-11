@@ -87,13 +87,23 @@ API Documentation
 
 🧩 Loyiha Struktura
 hamkor_bank_system/
+
 ├── accounts/       # Foydalanuvchi modeli va autentifikatsiya
+
 ├── cards/          # Kartalar bilan ishlash
+
 ├── transactions/   # Tranzaksiyalar va transfers
-├── payments/       # QR kod, Mobile, Internet, Communal paymentlar
+
+├── payments/       # Mobile, Internet, Communal paymentlar
+
+├── qrcode         # QR Code bilan to'lov qilish uchun
+
 ├── manage.py
+
 ├── requirements.txt
+
 └── README.md
+
 👩‍💻 Author
 
 Yasmina Tolibova
