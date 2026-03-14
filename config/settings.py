@@ -30,7 +30,7 @@ INSTALLED_APPS = [
 ]
 
 REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': [  # ← AUTHENTICATION (avval ATHENTICATION xato edi)
+    'DEFAULT_AUTHENTICATION_CLASSES': [  
         'rest_framework.authentication.TokenAuthentication'
     ],
     'DEFAULT_THROTTLE_CLASSES': [
@@ -45,7 +45,7 @@ REST_FRAMEWORK = {
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',  # ← yangi qo'shildi
+    'whitenoise.middleware.WhiteNoiseMiddleware',  
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -73,7 +73,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
-# ← FAQAT DATABASE_URL ishlatiladi (DB_NAME, DB_USER... o'chirildi)
+
 import dj_database_url
 DATABASES = {
     'default': dj_database_url.config(
@@ -84,7 +84,7 @@ DATABASES = {
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://teamwork-1-oqhf.onrender.com"  # ← URL to'g'irlandi
+    "https://hamkor-bank.onrender.com"  
 ]
 
 AUTH_PASSWORD_VALIDATORS = [
@@ -99,12 +99,12 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
 
-MEDIA_URL = '/media/'          # ← MEDIA_URLS → MEDIA_URL (S o'chirildi)
+MEDIA_URL = '/media/'          
 MEDIA_ROOT = BASE_DIR / 'media'
 
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'  # ← yangi
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'  
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
